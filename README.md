@@ -24,3 +24,10 @@ I found a mistake in the code. There is a warning message:
 
 <p align="justify">I think this is because in the controller, the `productListPage` did not correctly add the product. I fixed it by changing the return to 'ProductList' to match the HTML page. Also, I have not commented on my code. I think I should give a few clear comments to improve my coding practices.</p>
 
+## Reflection 2 
+
+1. After writing unit tests, I feel tired, but I understand the importance of testing (both unit & functional tests) in software development. I think we should make unit tests according to how many functions/methods we have. Each method should have a corresponding unit test. We should also have unit tests to check for edge cases. If we have 100% code coverage, it does not mean that our code has no bugs or error. Code coverage only means how much of our code is tested, not if it works properly as we want or not.
+
+
+2. When a new functional test is created, I think it does not implement clean code. Many variables and setup processes will be replicated. It is not aligned with the do not repeat yourself principle. To fix this, we can create a base functional test class so that it can be reused multiple times by others. For example, the base URL can be written so that the tests do not need to initialize it again and again.
+
