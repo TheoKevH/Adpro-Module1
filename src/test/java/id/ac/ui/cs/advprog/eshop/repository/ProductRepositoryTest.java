@@ -172,5 +172,20 @@ class ProductRepositoryTest {
         assertEquals(product2.getProductId(), savedProduct.getProductId());
         assertFalse(productIterator.hasNext());
     }
+
+    @Test
+    void testFindByIdWhenProductIdIsNull() {
+        Product product = new Product();
+        product.setProductId(null); // Simulating a null productId
+        product.setProductName("Invalid Product");
+        product.setProductQuantity(10);
+
+        productRepository.create(product);
+
+        Product foundProduct = productRepository.findById("some-random-id");
+
+        assertNull(foundProduct);
+    }
+
 }
 
