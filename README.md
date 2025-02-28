@@ -7,6 +7,33 @@ Kelas: Adpro A
 ## Deployment URL
 [ADV Shop](selfish-magda-theokevh-b6e25430.koyeb.app/)
 
+## Reflection
+
+1. **Explain what principles you apply to your project!**
+- *Single Responsibility Principle (SRP)*
+   
+   <p align="justify">I applied SRP by making sure all my classes only have on responsibility. Also, in my Spring Boot project, it is separated into controllers, services, repositories, and model. This is to make sure each processes are done by their own class. Additionally, I seperated the CarController from the ProductController. Because those two classes handle different things, I removed the "extends".</p>
+  <br />
+- *Open Closed Principle (OCP)*
+   <p align="justify">I have ensured that classes are open for extension but cannot be modified that simply. Also, I have created the update() method so that future subclasses do not need to modify its entire behavior.</p>
+   <br />
+- *Interface Segregation Principle (ISP)*
+   <p align="justify">I applied ISP by separating the CarService and ProductService interfaces because the services that implements them only specifically need one of them (not both).</p>
+   <br />
+- Dependency Inversion Principle (DIP)
+   <p align="justify">I applied DIP by changing my controller. Previously, <code>CarController</code> depended on a concrete class <code>CarServiceImpl</code>. I changed it so that it is not tightly coupled, now it dependes on an abstract class <code>CarService</code>.</p>
+
+2. **Explain the advantages of applying SOLID principles to your project with examples.**
+
+   <p align="justify"> Applying SOLID principles to our project provides scalability, maintainability, testability, and flexibility, making it easier to manage as the application grows. For example, by following Single Responsibility Principle (SRP), we separated the tasks: <code>CarController</code> only handles HTTP requests, while <code>CarServiceImpl</code> manages business logic, and <code>CarRepository</code> handles database operations, ensuring changes in one layer don’t affect others. Additionally, SOLID principles simplify code development, allowing us to extend our code without modifying existing functionality. For example, if we need to add a new controller, we can do so without disturbing other controller files. These principles also streamline implementation, as we don’t have to handle irrelevant methods inherited from a superclass, because of the Liskov Substitution Principle (LSP). Also, Interface Segregation Principle (ISP) ensures that we only implement the necessary methods, preventing us from being forced to include unnecessary functionality.</p>
+   
+
+3. **Explain the disadvantages of not applying SOLID principles to your project with examples.**
+
+   <p align="justify">Not applying SOLID principles to our project can lead to several issues, including tight coupling, code duplication, reduced maintainability, and difficulty in scaling. For example, without the Single Responsibility Principle (SRP), if <code>CarController</code> also handled business logic, any change to how cars are managed would require modifying the controller, making the code harder to maintain and test. Not applying the Open Closed Principle (OCP) means that adding a new product model would require modifying all of the other classes as well. Without the Liskov Substitution Principle (LSP), if <code>CarController</code> incorrectly extended <code>ProductController</code>, it might inherit and override methods that are not relevant to cars, leading to unexpected behavior and unnecessary dependencies.</p>
+<details>
+   <summary><b>Reflection 3</b></summary>
+
 ## Reflection 3
 
 1. **Code quality issues that I fixed & my strategy on fixing them:**
@@ -33,6 +60,8 @@ Kelas: Adpro A
 </ul>
 
 2. Yes, I believe my current code has met the definition of Continuous Integration (CI) and Continuous Deployment (CD). Firstly, when I push a new change to my repo, the automated CI would test the newly updated code to make sure it is up to standards. I think this is already an implementation of CI, because the workflow automates build and testing. I also have code scanning workflows. Additionally, the code meets the definition of CD because everytime I push or merge something into master, it automatically starts deploying to <b>Koyeb</b>. All of these reasons show that my code has successfully implemented the CI/CD pipeline.
+
+</details>
 
 <details>
   <summary><b>Reflection 1</b></summary>
