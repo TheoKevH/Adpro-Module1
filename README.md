@@ -7,6 +7,20 @@ Kelas: Adpro A
 ## Deployment URL
 [ADV Shop](selfish-magda-theokevh-b6e25430.koyeb.app/)
 
+## Reflection Module 4
+
+1. Reflect based on Percival (2017) proposed self-reflective questions (in “Principles and Best Practice of Testing” submodule, chapter “Evaluating Your Testing Objectives”), whether this TDD flow is useful enough for you or not. If not, explain things that you need to do next time you make more tests.
+
+    Personally I think the TDD (Test Driven Development) flow is very useful for me. When I follow the TDD flow in my project, I get to understand the project requirements deeper because I have to be able to generate tests that covers everything. The TDD flow also help in keeping my code well-structured. Initially, my tests failed (written in [RED]) but after correctly applying all the code requirements, it passed. This flow was quite unfamiliar for me, because I was previously used to creating the code first and then the tests after that. Additionally, the TDD flow helped me with refactoring.
+
+
+2. You have created unit tests in Tutorial. Now reflect whether your tests have successfully followed F.I.R.S.T. principle or not. If not, explain things that you need to do the next time you create more tests.
+    
+    F.I.R.S.T stands for Fast, Isolated, Repeatable, Self-validating, and Timely. I feel like my unit tests did not cover all of the F.I.R.S.T principles. I believe my unit tests have successfully implemented the Fast, Repeatable, Self-validating, and Timely principles. It can be seen from the reasonable time frame of my tests, the same results when run multiple times, having a clear pass/fail outcomes, and the process of writing the tests first before the code implementation. But, for the Isolated principle it still needs an improvement. Next time, I will ensure that each tests are independent from one another and not affecting each other.
+
+<details>
+    <summary><b>Reflection Module 3</b></summary>
+
 ## Reflection
 
 1. **Explain what principles you apply to your project!**
@@ -31,6 +45,9 @@ Kelas: Adpro A
 3. **Explain the disadvantages of not applying SOLID principles to your project with examples.**
 
    <p align="justify">Not applying SOLID principles to our project can lead to several issues, including tight coupling, code duplication, reduced maintainability, and difficulty in scaling. For example, without the Single Responsibility Principle (SRP), if <code>CarController</code> also handled business logic, any change to how cars are managed would require modifying the controller, making the code harder to maintain and test. Not applying the Open Closed Principle (OCP) means that adding a new product model would require modifying all of the other classes as well. Without the Liskov Substitution Principle (LSP), if <code>CarController</code> incorrectly extended <code>ProductController</code>, it might inherit and override methods that are not relevant to cars, leading to unexpected behavior and unnecessary dependencies.</p>
+
+</details>
+
 <details>
    <summary><b>Reflection 3</b></summary>
 
